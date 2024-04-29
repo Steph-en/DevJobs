@@ -1,3 +1,32 @@
-<h1 class="text-3xl font-bold underline text-green-500">
-  Hello world!
-</h1>
+<header>
+  <div
+    class="relative flex w-full justify-between lg:px-[10%] px-[5%] items-center h-[12rem]"
+  >
+    <div [routerLink]="['/']">
+      <img
+        class="cursor-pointer"
+        src="../assets/desktop/logo.svg"
+        alt="Devjobs logo"
+      />
+    </div>
+
+    <div class="toggle">
+      <img
+        class="toggleIconLeft"
+        src="../assets/desktop/icon-sun.svg"
+        alt="light mode icon"
+      />
+      <button
+        class="toggleButton"
+        (click)="toggleButton()"
+        [class.active]="isActive"
+      ></button>
+      <img
+        class="toggleIconRight"
+        src="../assets/desktop/icon-moon.svg"
+        alt="dark mode icon"
+      />
+    </div>
+  </div>
+</header>
+<router-outlet />

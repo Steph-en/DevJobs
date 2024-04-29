@@ -1,0 +1,257 @@
+<div class="lg:mx-[10%] md:mx-[5%]">
+    <form class="relative w-full">
+      <div
+        [ngClass]="{
+          ' hidden md:flex items-center justify-between  -mt-20 px-8 rounded-[0.6rem]': true,
+          'bg-white': !isDarkTheme,
+          'bg-[#19202d]': isDarkTheme
+        }"
+      >
+        <label class="inputLabel lg:grow">
+          <img src="/assets/desktop/icon-search.svg" alt="search icon" />
+          <input
+            [ngClass]="{
+              'inputField hidden lg:flex': true,
+              'text-white': isDarkTheme,
+              'text-[#8c8f96]': !isDarkTheme
+            }"
+            type="text"
+            placeholder="Filter by title, companies, expertise..."
+            name="title"
+            [(ngModel)]="title"
+            (ngModelChange)="checkInputsAndSearch()"
+          />
+  
+          <input
+            [ngClass]="{
+              'inputField lg:hidden md:flex': true,
+              'text-white': isDarkTheme,
+              'text-[#8c8f96]': !isDarkTheme
+            }"
+            type="text"
+            placeholder="Filter by title..."
+            name="title"
+            [(ngModel)]="title"
+            (ngModelChange)="checkInputsAndSearch()"
+          />
+        </label>
+  
+        <label class="inputLabel lg:grow-[0.5]">
+          <img
+            src="/assets/desktop/icon-location.svg"
+            alt="location icon"
+          />
+          <input
+            [ngClass]="{
+              inputField: true,
+              'text-white': isDarkTheme,
+              'text-[#8c8f96]': !isDarkTheme
+            }"
+            type="text"
+            placeholder="Filter by Location..."
+            name="location"
+            [(ngModel)]="location"
+            (ngModelChange)="checkInputsAndSearch()"
+          />
+        </label>
+  
+        <label class="checkboxLabel" for="filterByFullTime">
+          <input
+            id="filterByFullTime"
+            class="checkboxDefaultInput hidden"
+            type="checkbox"
+            name="isFullTime"
+            [(ngModel)]="isFullTime"
+            (ngModelChange)="checkInputsAndSearch()"
+          />
+          <span
+            class="checkboxCustomInput"
+            [ngClass]="{
+              'bg-[#f2f2f2f2]': !isDarkTheme,
+              'bg-[#313743]': isDarkTheme
+            }"
+          ></span>
+          <span
+            [ngClass]="{
+              'font-bold': true,
+              'text-[#19202D]': !isDarkTheme,
+              'text-white': isDarkTheme
+            }"
+          >
+            Full Time
+            <span class="hidden lg:inline-flex"> Only </span>
+          </span>
+        </label>
+  
+        <div>
+          <Button
+            class="button py-[1rem] px-[2rem] lg:px-[4rem]"
+            (click)="searchJobs()"
+          >
+            Search
+          </Button>
+        </div>
+      </div>
+  
+      <div
+        [ngClass]="{
+          'searchBar relative flex md:hidden items-center justify-between -mt-20 mx-[5%] md:mx-[10%] p-3 rounded-[0.6rem]': true,
+          'bg-white': !isDarkTheme,
+          'bg-[#19202d]': isDarkTheme
+        }"
+      >
+        <input
+          [ngClass]="{
+            'inputField grow': true,
+            'text-white': isDarkTheme,
+            'text-[#8c8f96]': !isDarkTheme
+          }"
+          type="text"
+          placeholder="Filter by title..."
+          name="title"
+          [(ngModel)]="title"
+          (ngModelChange)="checkInputsAndSearch()"
+        />
+  
+        <div class="flex items-center justify-between gap-5">
+          <div (click)="toggleFilterByLocation()">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"
+                [attr.fill]="isDarkTheme ? 'white' : '#6E8098'"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </div>
+  
+          <div
+            class="bg-[#5964E0] p-[1rem] rounded-[0.5rem]"
+            (click)="searchJobs()"
+          >
+            <svg
+              viewBox="0 0 20 20"
+              class="w-5 h-5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.3533 12.549H14.2603L19.9529 18.2531L18.2531 19.9529L12.549 14.2603V13.359L12.2353 13.0453C10.9405 14.1576 9.25775 14.8307 7.41535 14.8307C3.31979 14.8307 0 11.5109 0 7.41535C0 3.31979 3.31984 0 7.41535 0C11.5109 0 14.8306 3.31979 14.8306 7.41535C14.8306 9.25775 14.1576 10.9405 13.0396 12.2353L13.3533 12.549ZM2.28166 7.41535C2.28166 10.2503 4.58043 12.549 7.41535 12.549C10.2503 12.549 12.549 10.2503 12.549 7.41535C12.549 4.58043 10.2503 2.28166 7.41535 2.28166C4.58043 2.28166 2.28166 4.58043 2.28166 7.41535Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+  
+      @if(filterByLocation){
+      <div class="fixed md:hidden inset-0 z-20 px-8">
+        <div class="absolute inset-0 bg-black h-auto opacity-80 z-40"></div>
+        <div
+          [ngClass]="{
+            'relative top-[40%] left-[50%] -translate-x-2/4 flex flex-col justify-center z-50 rounded-lg py-4': true,
+            'bg-white': !isDarkTheme,
+            'bg-[#19202d]': isDarkTheme
+          }"
+        >
+          <div class="flex flex-col">
+            <label class="inputLabel border-b-[0.5px] border-[#8c8f96]">
+              <img
+                src="/assets/desktop/icon-location.svg"
+                alt="location icon"
+              />
+              <input
+                [ngClass]="{
+                  inputField: true,
+                  'text-white': isDarkTheme,
+                  'text-[#8c8f96]': !isDarkTheme
+                }"
+                type="text"
+                placeholder="Filter by Location..."
+                name="location"
+                [(ngModel)]="location"
+                (ngModelChange)="checkInputsAndSearch()"
+              />
+            </label>
+  
+            <label class="checkboxLabel" for="filterByFullTimeMobile">
+              <input
+                id="filterByFullTimeMobile"
+                class="checkboxDefaultInput hidden"
+                type="checkbox"
+                name="isFullTime"
+                [(ngModel)]="isFullTime"
+                (ngModelChange)="checkInputsAndSearch()"
+              />
+              <span
+                class="checkboxCustomInput"
+                [ngClass]="{
+                  'bg-[#f2f2f2f2]': !isDarkTheme,
+                  'bg-[#313743]': isDarkTheme
+                }"
+              ></span>
+              <span
+                [ngClass]="{
+                  'font-bold': true,
+                  'text-[#19202D]': !isDarkTheme,
+                  'text-white': isDarkTheme
+                }"
+              >
+                Full Time Only
+              </span>
+            </label>
+  
+            <div class="mx-3">
+              <Button
+                class="button flex items-center justify-center w-full py-[1rem] px-[4rem]"
+                (click)="searchJobs()"
+                (click)="toggleFilterByLocation()"
+              >
+                Search
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </form>
+  
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 p-[8rem_0_0]"
+    >
+      @for( job of displayJobs; track displayJobs){
+      <app-job-card [job]="job" />
+      }@empty {
+      <div class="col-span-full flex flex-col items-center justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="96"
+          height="96"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="mb-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+        <p class="text-lg text-center">No results found for the search input</p>
+      </div>
+      }
+    </div>
+  
+    <div class="flex items-center justify-center my-10">
+      <Button
+        class="button py-[1rem] px-[4rem]"
+        *ngIf="!isSearchActive && hasMoreJobs()"
+        (click)="addMoreJobs()"
+      >
+        Load More
+      </Button>
+    </div>
+  </div>
