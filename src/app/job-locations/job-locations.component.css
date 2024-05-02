@@ -1,22 +1,27 @@
-jobs {
-    background: var(--accent-color);
-    border-radius: 30px;
-    padding-bottom: 30px;
+
+.jobs {
+    position: relative;
+    width: 350px;
+    height: 228px;
+    padding: 40px;
+    border-radius: 6px;
+    background: var(--white);
 }
 
 .logo {
+    position: absolute;
+    top: -20px;
+    left: 30px;
     width: 50px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 30px 30px 0 0;
+    height: 50px;
+    object-fit: scale-down;
+    border-radius: 10px 10px;
 }
 
 .listing-heading {
     color: var(--primary-color);
     padding: 10px 20px 0 20px;
 }
-
-
 
 .listing-location {
     padding: 10px 20px 20px 20px;

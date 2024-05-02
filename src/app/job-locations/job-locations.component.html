@@ -1,5 +1,5 @@
 <section class="jobs">
-    <img class="logo" [src]="jobLocation.logo" alt="Logo of {{ jobLocation.company }}">
+    <img class="logo" [src]="jobLocation.logo" [style.background-color]="jobLocation.logoBackground" alt="Logo of {{ jobLocation.company }}">
     <h3 class="position">{{ jobLocation.position }}</h3>
     <p class="company">{{ jobLocation.company }}</p>
     <h4 class="location">{{ jobLocation.location }}</h4>
