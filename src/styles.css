@@ -3,71 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --white:  #FFFFFF;
+    --violet: #5964E0;
+    --bg-desktop-main: #F4F6F8;
+  }
+
 *,
 *::before,
-*::after {
-    box-sizing: border-box;
+*::after, html {
     margin: 0;
     padding: 0;
-}
-
-html {
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: "Kumbh Sans", sans-serif;
-    font-size: 1.6rem;
     line-height: 2.6rem;
-    color: #5964e0;
-}
-
-p {
-    color: #6e8098;
-}
-
-header {
-    background-image: url("/assets/desktop/bg-pattern-header.svg");
-    width: 100%;
-    height: 16rem;
-    border-radius: 0 0 0 10rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        border-radius: 0;
-        background-image: url("/assets/mobile/bg-pattern-header.svg");
-    }
-}
-
-input {
-    outline: none;
-    border: none;
-}
-
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-button,
-a {
     font-size: 1.6rem;
-    font-weight: 700;
-    border-radius: 0.5rem;
-    text-transform: capitalize;
-    transition: 0.2s linear;
-}
-
-.button {
-    color: #fff;
-    background-color: #5964e0;
-}
-
-.button:hover {
-    background-color: #939bf4;
+    color: #5964e0;
+    height: 100dvh;
+    width: 100%;
 }

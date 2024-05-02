@@ -1,32 +1,16 @@
-<header>
-  <div
-    class="relative flex w-full justify-between lg:px-[10%] px-[5%] items-center h-[12rem]"
-  >
-    <div [routerLink]="['/']">
-      <img
-        class="cursor-pointer"
-        src="../assets/desktop/logo.svg"
-        alt="Devjobs logo"
-      />
-    </div>
-
+<main>
+  <header>
+    <img src="../assets/desktop/logo.svg" alt="">
     <div class="toggle">
-      <img
-        class="toggleIconLeft"
-        src="../assets/desktop/icon-sun.svg"
-        alt="light mode icon"
-      />
-      <button
-        class="toggleButton"
-        (click)="toggleButton()"
-        [class.active]="isActive"
-      ></button>
-      <img
-        class="toggleIconRight"
-        src="../assets/desktop/icon-moon.svg"
-        alt="dark mode icon"
-      />
+      <img src="../assets/desktop/icon-sun.svg" alt="susn-icon">
+      <div class="toggle-btn">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" onclick="toggle()"></label>
+      </div>
+      <img src="../assets/desktop/icon-moon.svg" alt="moon-icon">
     </div>
-  </div>
-</header>
-<router-outlet />
+  </header>
+  <section class="content">
+    <router-outlet />
+  </section>
+</main>
