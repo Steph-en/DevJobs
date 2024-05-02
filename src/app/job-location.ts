@@ -4,7 +4,7 @@ export interface JobLocation {
     logo: string,
     logoBackground: string,
     position: string,
-    postedAt: "5h ago",
+    postedAt: string,
     contract: string,
     location: string,
     website: string,

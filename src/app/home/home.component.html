@@ -16,5 +16,5 @@
     </form>
 </section>
 <section class="jobs">
-    <app-job-locations />
+    <app-job-locations *ngFor="let jobLocation of jobLocationList" [jobLocation]="jobLocation" />
 </section>
