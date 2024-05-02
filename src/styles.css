@@ -6,6 +6,7 @@
 :root {
     --white:  #FFFFFF;
     --violet: #5964E0;
+    --font: #19202D;
     --bg-desktop-main: #F4F6F8;
   }
 
@@ -14,7 +15,6 @@
 *::after, html {
     margin: 0;
     padding: 0;
-    /* font-size: 62.5%; */
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -22,7 +22,7 @@
 body {
     font-family: "Kumbh Sans", sans-serif;
     line-height: 2.6rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #5964e0;
     height: 100dvh;
     width: 100%;
