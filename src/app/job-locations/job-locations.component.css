@@ -1,8 +1,8 @@
 
-.jobs {
+.role {
     position: relative;
-    width: 350px;
-    height: 228px;
+    width: 480px;
+    height: 258px;
     padding: 40px;
     border-radius: 6px;
     background: var(--white);
@@ -18,26 +18,25 @@
     border-radius: 10px 10px;
 }
 
-.listing-heading {
-    color: var(--primary-color);
-    padding: 10px 20px 0 20px;
+.position {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font);
+}
+.position:hover{
+    cursor: pointer;
+    color: var(--font-dark-gray);
 }
 
-.listing-location {
-    padding: 10px 20px 20px 20px;
+.company {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--font-dark-gray);
 }
 
-.listing-location::before {
-    content: url("/assets/location-pin.svg") / "";
-}
-
-section.listing a {
-    padding-left: 20px;
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-section.listing a::after {
-    content: "\203A";
-    margin-left: 5px;
+.location {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--violet);
+    padding: 10px 20px 20px 0;
 }

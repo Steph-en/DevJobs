@@ -4,9 +4,11 @@
 @tailwind utilities;
 
 :root {
+    --font: #19202D;
     --white:  #FFFFFF;
     --violet: #5964E0;
-    --font: #19202D;
+    --light-violet: #939BF4;
+    --font-dark-gray: #6E8098;
     --bg-desktop-main: #F4F6F8;
   }
 
@@ -24,6 +26,7 @@ body {
     line-height: 2.6rem;
     font-size: 1.4rem;
     color: #5964e0;
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
+    background-color: var(--bg-desktop-main);
 }
