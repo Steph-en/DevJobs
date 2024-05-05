@@ -1,12 +1,12 @@
 .filter {
-    width: 90%;
+    width: 100%;
 
     form {
         position: relative;
-        top: 5em;
-        left: 12.5%;
-        width: 86%;
-        height: auto;
+        top: 14vh;
+        left: 8.5%;
+        width: 74.8vw;
+        height: 70px;
         display: flex;
         padding: 20px;
         border-radius: 10px;
@@ -54,6 +54,10 @@
                 position: fixed;
                 background-color: #6e8098;
             }
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         &.location {
@@ -90,20 +94,25 @@
                 position: fixed;
                 background-color: #6e8098;
             }
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
-        &.job-type {
+        &.contract {
             gap: 10px;
             width: 28%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             color: #19202D;
-            font-weight: 600;
+            font-weight: 500;
+
             input {
                 width: 20px;
                 height: 20px;
-                background: #979797;
+                background-color: #979797;
             }
 
             input:hover {
@@ -119,29 +128,24 @@
                 background-color: var(--violet);
 
                 &:hover {
+                    cursor: pointer;
                     background-color: var(--light-violet);
                 }
             }
         }
-
-        &:hover {
-            cursor: pointer;
-            transition: .5s ease-in-out;
-        }
     }
-
-
 }
 
 .job {
     position: relative;
-    top: 20%;
+    gap: 50px 30px;
+    margin: 0;
+    padding: 0;
+    top: 22vh;
     left: 0;
-    gap: 40px 25px;
-    width: 100%;
+    width: 90vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
 }
