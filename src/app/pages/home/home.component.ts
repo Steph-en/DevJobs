@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JobLocationsComponent } from '../../job-locations/job-locations.component';
 import { JobLocation } from '../../interface/job-location';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-home',
@@ -491,6 +492,9 @@ export class HomeComponent {
           "Proactively solve the problems most important to the business"
         ]
       }
-    }
+    },
   ]
+
+  constructor(private appService: AppService) {}
+
 }
