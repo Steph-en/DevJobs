@@ -1,47 +1,54 @@
 .role {
-    position: relative;
+    position: relative;;
     width: 472px;
     height: 258px;
     padding: 50px 30px 20px 30px;
     border-radius: 6px;
     background: var(--white);
-}
 
-.logo {
-    position: absolute;
-    top: -20px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
-    object-fit: scale-down;
-    border-radius: 10px 10px;
-}
+    .logo {
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        object-fit: scale-down;
+        border-radius: 10px 10px;
+    }
 
-.posted{
-    color: var(--font-dark-gray);
-    font-size: 16px;
-}
+    .posted {
+        color: var(--font-dark-gray);
+        font-size: 18px;
+        line-height: 35px;
+    }
 
-.position {
-    margin: 100000px 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--font);
-}
-.position:hover{
-    cursor: pointer;
-    color: var(--font-dark-gray);
-}
+    .position {
+        margin: 100000px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--font);
+        line-height: 45px;
+    }
 
-.company {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--font-dark-gray);
-}
+    .position:hover {
+        cursor: pointer;
+        color: var(--font-dark-gray);
+        line-height: 35px;
+    }
 
-.location {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--violet);
-    padding: 10px 20px 20px 0;
+    .company {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--font-dark-gray);
+        line-height: 40px;
+    }
+
+    .location {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--violet);
+        padding: 10px 20px 20px 0;
+        line-height: 75px;
+    }
+
 }
