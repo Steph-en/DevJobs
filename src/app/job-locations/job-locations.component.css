@@ -23,7 +23,6 @@
     }
 
     .position {
-        margin: 100000px 0;
         font-size: 20px;
         font-weight: bold;
         color: var(--font);
@@ -33,7 +32,7 @@
     .position:hover {
         cursor: pointer;
         color: var(--font-dark-gray);
-        line-height: 35px;
+        line-height: 45px;
     }
 
     .company {

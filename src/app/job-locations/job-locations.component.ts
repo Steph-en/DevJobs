@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { JobLocation } from '../job-location';
+import { JobLocation } from '../interface/job-location';
 
 @Component({
   selector: 'app-job-locations',

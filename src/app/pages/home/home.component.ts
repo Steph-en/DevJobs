@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { JobLocationsComponent } from '../job-locations/job-locations.component';
-import { JobLocation } from '../job-location';
+import { JobLocationsComponent } from '../../job-locations/job-locations.component';
+import { JobLocation } from '../../interface/job-location';
 
 @Component({
   selector: 'app-home',
