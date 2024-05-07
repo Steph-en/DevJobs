@@ -1,0 +1,102 @@
+@import url(../../../app.component.css);
+
+.head {
+    width: 78vw;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 10px 10px 10px;
+    background-color: var(--white);
+}
+
+.logo{
+    width: 140px;
+    height: 140px;
+    object-fit:scale-down;
+    background-size: cover;
+    border-radius: 0 0 0 10px;
+}
+
+.company {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.company p{
+    font-size: 24px;
+    color: #19202D;
+    font-weight: bold;
+}
+
+.company span{
+    color: #6E8098;
+    font-size: 16px;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.company a{
+    width: 147px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C9C9C9;
+}
+
+.company a:hover{
+    cursor: pointer;
+    background-color: var(--light-violet);
+    transition: .2s ease-in-out;
+}
+
+
+
+.details {
+    position: relative;
+    gap: 50px 30px;
+    margin: 0;
+    padding: 0;
+    top: 25vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.details{
+    width: 78vw;
+    height: auto;
+    display: flex;
+    padding: 50px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+.apply{
+    display: flex;
+    justify-content: space-between;
+}
+
+.apply p{
+    font-size: 28px;
+    color: #19202D;
+    font-weight: bold;
+}
+
+.apply span{
+    font-size: 14px;
+    color: #6E8098;
+    font-weight: bold;
+    text-transform: capitalize;
+}

@@ -1,1 +1,16 @@
-<p>details works!</p>
+<section class="head">
+    <img class="logo" [src]="jobLocation?.logo" [style.background]="jobLocation?.logoBackground"
+        alt="Logo of {{ jobLocation?.company }}">
+    <div class="company">
+        <p>{{ jobLocation?.company}} <br> <span>{{jobLocation?.company}}.com</span></p>
+        <a style="text-transform: capitalize;" [href]="jobLocation?.website">company site</a>
+    </div>
+</section>
+<section class="details">
+    <p>{{jobLocation?.postedAt}} . {{jobLocation?.contract}}</p>
+    <div class="apply">
+        <p>{{jobLocation?.position}} <br> <span>{{jobLocation?.location}}</span></p>
+        <a style="text-transform: capitalize;" [href]="jobLocation?.website">apply now</a>
+    </div>
+    <p>{{jobLocation?.description}}</p>
+</section>

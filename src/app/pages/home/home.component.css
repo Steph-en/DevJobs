@@ -10,7 +10,7 @@
         position: relative;
         left: 0;
         top: 16vh;
-        width: 86.5%;
+        width: 78%;
         height: 7vh;
         display: flex;
         padding: 20px;
@@ -117,9 +117,10 @@
 
             input {
                 /* display: hidden; */
+                padding: 20px;
             }
 
-            input::after{
+            /* input::after{
                 content: '';
                 width: 20px;
                 height: 20px;
@@ -127,13 +128,19 @@
                 border-radius: 3px;
                 border: 1px solid #bebebe;
                 background-color: rgb(216, 216, 216);
-            }
+            } */
 
-            input:hover::after {
+            input:hover {
                 cursor: pointer;
                 background-color: var(--light-violet);
                 transition: .3s ease-in-out;
             }
+
+            /* input:hover::after {
+                cursor: pointer;
+                background-color: var(--light-violet);
+                transition: .3s ease-in-out;
+            } */
 
             .primary {
                 width: 123px;
