@@ -11,7 +11,7 @@
         left: 0;
         top: 16vh;
         width: 86.5%;
-        height: 7.5vh;
+        height: 7vh;
         display: flex;
         padding: 20px;
         border-radius: 10px;
@@ -24,6 +24,7 @@
     label {
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         &.company {
             gap: 20px;
@@ -115,16 +116,23 @@
             font-weight: 500;
 
             input {
-                position: relative;
-                /* left: 4em; */
-                width: 20px;
-                height: 20px;
-                background-color: #979797;
+                /* display: hidden; */
             }
 
-            input:hover {
+            input::after{
+                content: '';
+                width: 20px;
+                height: 20px;
+                display: block;
+                border-radius: 3px;
+                border: 1px solid #bebebe;
+                background-color: rgb(216, 216, 216);
+            }
+
+            input:hover::after {
                 cursor: pointer;
                 background-color: var(--light-violet);
+                transition: .3s ease-in-out;
             }
 
             .primary {
