@@ -7,83 +7,72 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
 
-  header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 16vh;
-    display: flex;
-    padding: 0 11%;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0 0 0 10rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("/assets/desktop/bg-pattern-header.svg");
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  padding: 0 11%;
+  align-items: center;
+  background-size: cover;
+  border-radius: 0 0 0 10rem;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  background-image: url("/assets/desktop/bg-pattern-header.svg");
+}
 
-    .toggle {
-      gap: 14px;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
+.toggle {
+  gap: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
 
-      .toggle-btn {
-        #toggle {
-          display: none;
-        }
+.toggle-btn #toggle {
+  display: none;
+}
 
-        label {
-          width: 48px;
-          height: 22px;
-          cursor: pointer;
-          position: relative;
-          border-radius: 50px;
-          display: inline-block;
-          background-color: var(--white);
-        }
+.toggle-btn label {
+  width: 48px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50px;
+  display: inline-block;
+  background-color: var(--white);
+}
 
-        label::before {
-          content: "";
-          position: absolute;
-          top: 4px;
-          left: 4px;
-          width: 14px;
-          height: 14px;
-          background-color: var(--violet);
-          border-radius: 50%;
-          transition: transform 0.3s;
+.toggle-btn label::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--violet);
+  border-radius: 50%;
+  transition: transform 0.3s;
 
-        }
+}
 
-        label:hover::before {
-          background-color: var(--light-violet);
-          transition: .1s ease-in-out;
-        }
+.toggle-btn label:hover::before {
+  background-color: var(--light-violet);
+  transition: .1s ease-in-out;
+}
 
 
-        #toggle:checked+label {
-          background-color: var(--white);
-        }
+.toggle-btn #toggle:checked+label {
+  background-color: var(--white);
+}
 
-        #toggle:checked+label::before {
-          transform: translateX(20px);
-        }
-      }
+.toggle-btn #toggle:checked+label::before {
+  transform: translateX(20px);
+}
 
-      .toggle-btn:hover {
-        cursor: pointer;
-      }
-    }
-  }
-
-  /* .content {
-    width: 90%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
+.toggle-btn:hover {
+  cursor: pointer;
 }

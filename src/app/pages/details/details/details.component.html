@@ -1,16 +1,37 @@
 <section class="head">
-    <img class="logo" [src]="jobLocation?.logo" [style.background]="jobLocation?.logoBackground"
-        alt="Logo of {{ jobLocation?.company }}">
+    <div class="logo" [style.background]="jobLocation?.logoBackground">
+        <img [src]="jobLocation?.logo" alt="Logo of {{ jobLocation?.company }}">
+    </div>
     <div class="company">
-        <p>{{ jobLocation?.company}} <br> <span>{{jobLocation?.company}}.com</span></p>
+        <p>{{jobLocation?.company}} <br> <span>{{jobLocation?.company}}.com</span></p>
         <a style="text-transform: capitalize;" [href]="jobLocation?.website">company site</a>
     </div>
 </section>
 <section class="details">
-    <p>{{jobLocation?.postedAt}} . {{jobLocation?.contract}}</p>
+    <p class="post">{{jobLocation?.postedAt}} . {{jobLocation?.contract}}</p>
     <div class="apply">
         <p>{{jobLocation?.position}} <br> <span>{{jobLocation?.location}}</span></p>
         <a style="text-transform: capitalize;" [href]="jobLocation?.website">apply now</a>
     </div>
-    <p>{{jobLocation?.description}}</p>
+    <p class="description">{{jobLocation?.description}}</p>
+
+    <div class="reqirements">
+        <h3>Requirements</h3>
+        <p>{{jobLocation?.requirements?.content}}</p>
+        <li *ngFor="let item of jobLocation?.requirements?.items"><span style="color: #6E8098;">{{item}}</span></li>
+    </div>
+
+    <div class="item">
+        <h3>what you will do</h3>
+        <p>{{jobLocation?.role?.content}}</p>
+        <li *ngFor="let item of jobLocation?.role?.items"><span style="color: #6E8098;">{{item}}</span></li>
+    </div>
 </section>
+<footer>
+    <div class="foot">
+        <p>{{jobLocation?.position}} <br> <span
+                style="font-size: 16px; font-weight: 400; color: #6E8098; letter-spacing: .5px;">{{jobLocation?.company}}</span>
+        </p>
+        <a style="text-transform: capitalize;" [href]="jobLocation?.apply">apply now</a>
+    </div>
+</footer>

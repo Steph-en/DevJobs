@@ -120,27 +120,12 @@
                 padding: 20px;
             }
 
-            /* input::after{
-                content: '';
-                width: 20px;
-                height: 20px;
-                display: block;
-                border-radius: 3px;
-                border: 1px solid #bebebe;
-                background-color: rgb(216, 216, 216);
-            } */
 
             input:hover {
                 cursor: pointer;
                 background-color: var(--light-violet);
                 transition: .3s ease-in-out;
             }
-
-            /* input:hover::after {
-                cursor: pointer;
-                background-color: var(--light-violet);
-                transition: .3s ease-in-out;
-            } */
 
             .primary {
                 width: 123px;
@@ -161,8 +146,8 @@
 .job {
     position: relative;
     gap: 50px 30px;
+    padding: 0; 
     margin: 0;
-    padding: 0;
     top: 25vh;
     left: 0;
     width: 100%;

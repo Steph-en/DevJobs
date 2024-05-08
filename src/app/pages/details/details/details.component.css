@@ -1,7 +1,9 @@
 @import url(../../../app.component.css);
 
 .head {
-    width: 78vw;
+    position: relative;
+    bottom: 31vh;
+    width: 60vw;
     height: 140px;
     display: flex;
     align-items: center;
@@ -9,12 +11,18 @@
     background-color: var(--white);
 }
 
-.logo{
+.logo {
     width: 140px;
     height: 140px;
-    object-fit:scale-down;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0 0 0 10px;
+}
+
+.logo img{
+
 }
 
 .company {
@@ -26,20 +34,20 @@
     justify-content: space-between;
 }
 
-.company p{
+.company p {
     font-size: 24px;
     color: #19202D;
     font-weight: bold;
 }
 
-.company span{
+.company span {
     color: #6E8098;
     font-size: 16px;
     text-transform: lowercase;
     font-weight: 400;
 }
 
-.company a{
+.company a {
     width: 147px;
     height: 48px;
     font-size: 16px;
@@ -51,30 +59,17 @@
     background-color: #C9C9C9;
 }
 
-.company a:hover{
+.company a:hover {
     cursor: pointer;
     background-color: var(--light-violet);
     transition: .2s ease-in-out;
 }
 
-
-
 .details {
-    position: relative;
-    gap: 50px 30px;
-    margin: 0;
-    padding: 0;
-    top: 25vh;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.details{
-    width: 78vw;
+    position: absolute;
+    gap: 40px;
+    top: 30vh;
+    width: 60vw;
     height: auto;
     display: flex;
     padding: 50px;
@@ -83,20 +78,143 @@
     background-color: #FFFFFF;
 }
 
-.apply{
+.post {
+    color: #6E8098;
+    font-size: 16px;
+}
+
+.apply {
     display: flex;
     justify-content: space-between;
 }
 
-.apply p{
+.apply p {
     font-size: 28px;
     color: #19202D;
     font-weight: bold;
 }
 
-.apply span{
+.apply span {
     font-size: 14px;
-    color: #6E8098;
+    color: #5964E0;
     font-weight: bold;
     text-transform: capitalize;
+}
+
+.apply a {
+    width: 147px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    background-color: #5964E0;
+}
+
+.apply a:hover {
+    cursor: pointer;
+    background-color: #939BF4;
+    transition: .2s ease-in-out;
+}
+
+.description {
+    color: #6E8098;
+    font-size: 16px;
+}
+
+.reqirements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom : 50px;
+}
+
+.reqirements h3 {
+    color: #19202D;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reqirements p {
+    color: #6E8098;
+    font-size: 16px;
+}
+
+.reqirements li {
+    color: #5964E0;
+    font-size: 16px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.item h3 {
+    color: #19202D;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.item p {
+    color: #6E8098;
+    font-size: 16px;
+}
+
+.item li {
+    color: #5964E0;
+    font-size: 16px;
+}
+
+footer {
+    position: absolute;
+    top: 70em;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.foot {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.foot p {
+    color: #19202D;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.foot a {
+    width: 147px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    background-color: #5964E0;
+}
+
+.foot a:hover {
+    cursor: pointer;
+    background-color: #939BF4;
+    transition: .2s ease-in-out;
 }
