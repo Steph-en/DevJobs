@@ -13,10 +13,8 @@ import { JobLocation } from '../../../interface/job-location';
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  // jobLocationId = 0;
   appService = inject(AppService);
   jobLocation: JobLocation | undefined;
-
 
   constructor() {
     const jobLocationId = Number(this.route.snapshot.params['id']);
