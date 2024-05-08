@@ -8,11 +8,11 @@
     display: flex;
     align-items: center;
     border-radius: 0 10px 10px 10px;
-    background-color: var(--white);
+    background-color: #FFFFFF;
 }
 
 .logo {
-    width: 140px;
+    width: 160px;
     height: 140px;
     background-size: cover;
     display: flex;
@@ -22,6 +22,7 @@
 }
 
 .logo img{
+    width: 90px;
 
 }
 
@@ -68,7 +69,7 @@
 .details {
     position: absolute;
     gap: 40px;
-    top: 30vh;
+    top: 31vh;
     width: 60vw;
     height: auto;
     display: flex;
@@ -76,11 +77,6 @@
     border-radius: 10px;
     flex-direction: column;
     background-color: #FFFFFF;
-}
-
-.post {
-    color: #6E8098;
-    font-size: 16px;
 }
 
 .apply {
@@ -92,6 +88,12 @@
     font-size: 28px;
     color: #19202D;
     font-weight: bold;
+}
+
+.apply .post {
+    color: #6E8098;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .apply span {
@@ -171,6 +173,9 @@
 .item li {
     color: #5964E0;
     font-size: 16px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 footer {

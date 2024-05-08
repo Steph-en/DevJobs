@@ -8,9 +8,9 @@
     </div>
 </section>
 <section class="details">
-    <p class="post">{{jobLocation?.postedAt}} . {{jobLocation?.contract}}</p>
     <div class="apply">
-        <p>{{jobLocation?.position}} <br> <span>{{jobLocation?.location}}</span></p>
+        <p><span class="post">{{jobLocation?.postedAt}} . {{jobLocation?.contract}}</span> <br>
+            {{jobLocation?.position}} <br> <span>{{jobLocation?.location}}</span></p>
         <a style="text-transform: capitalize;" [href]="jobLocation?.website">apply now</a>
     </div>
     <p class="description">{{jobLocation?.description}}</p>
@@ -18,13 +18,18 @@
     <div class="reqirements">
         <h3>Requirements</h3>
         <p>{{jobLocation?.requirements?.content}}</p>
-        <li *ngFor="let item of jobLocation?.requirements?.items"><span style="color: #6E8098;">{{item}}</span></li>
+        <li *ngFor="let item of jobLocation?.requirements?.items ">
+            <span style="color: #6E8098;">{{item}}</span>
+        </li>
     </div>
 
     <div class="item">
         <h3>what you will do</h3>
         <p>{{jobLocation?.role?.content}}</p>
-        <li *ngFor="let item of jobLocation?.role?.items"><span style="color: #6E8098;">{{item}}</span></li>
+        <li *ngFor="let item of jobLocation?.role?.items let i = index">
+            <span class="text-[#5964e0] font-bold">{{ i + 1 }}</span>
+            <span style="color: #6E8098;">{{item}}</span>
+        </li>
     </div>
 </section>
 <footer>
