@@ -1,6 +1,6 @@
 <section class="head">
     <div class="logo" [style.background]="jobLocation?.logoBackground">
-        <img [src]="jobLocation?.logo" alt="Logo of {{ jobLocation?.company }}">
+        <img [src]="jobLocation?.logo" alt="Logo of {{jobLocation?.company}}">
     </div>
     <div class="company">
         <p>{{jobLocation?.company}} <br> <span>{{jobLocation?.company}}.com</span></p>
@@ -34,8 +34,10 @@
 </section>
 <footer>
     <div class="foot">
-        <p>{{jobLocation?.position}} <br> <span
-                style="font-size: 16px; font-weight: 400; color: #6E8098; letter-spacing: .5px;">{{jobLocation?.company}}</span>
+        <p>{{jobLocation?.position}} <br> 
+            <span style="font-size: 16px; font-weight: 400; color: #6E8098; letter-spacing: .5px;">
+                {{jobLocation?.company}}
+            </span>
         </p>
         <a style="text-transform: capitalize;" [href]="jobLocation?.apply">apply now</a>
     </div>
