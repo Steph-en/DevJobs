@@ -2,7 +2,7 @@
     <form>
         <label class="company">
             <img src="../../assets/desktop/icon-search.svg" alt="">
-            <input type="text" placeholder="Filter by title, companies, expertise…" />
+            <input type="text" placeholder="Filter by title, companies, expertise…" #filter />
         </label>
         <label class="location">
             <img src="../../assets/desktop/icon-location.svg" alt="">
@@ -12,10 +12,10 @@
             <input type="checkbox">
             <span class="checkmark"></span>
             <span>Full Time Only</span>
-            <button class="primary" type="button">Search</button>
+            <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
         </label>
     </form>
 </section>
 <section class="job">
-    <app-job-locations *ngFor="let jobLocation of jobLocationList" [jobLocation]="jobLocation"/>
+    <app-job-locations *ngFor="let jobLocation of filteredLocationList" [jobLocation]="jobLocation"/>
 </section>

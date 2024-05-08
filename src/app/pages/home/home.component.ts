@@ -17,9 +17,20 @@ export class HomeComponent {
 
   appService: AppService = inject(AppService);
 
+  filteredLocationList: JobLocation[] =[];
+
   // applForm = new FormGroup()
 
   constructor() {
     this.jobLocationList = this.appService.getAllJoblocations()
+    this.filteredLocationList =this.jobLocationList;
+  }
+
+  filterResults(text: string) {
+    if (!text) this.filteredLocationList = this.jobLocationList;
+
+    this.filteredLocationList = this.jobLocationList.filter(
+      jobLocation => jobLocation?.company.toLowerCase().includes(text.toLowerCase())
+    )
   }
 }
