@@ -4,7 +4,7 @@
     height: 258px;
     padding: 50px 30px 20px 30px;
     border-radius: 6px;
-    background: var(--white);
+    background: #FFFFFF;
 
     .logo {
         position: absolute;
@@ -17,7 +17,7 @@
     }
 
     .posted {
-        color: var(--font-dark-gray);
+        color: #6E8098;
         font-size: 18px;
         line-height: 35px;
     }
@@ -25,27 +25,27 @@
     .position {
         font-size: 20px;
         font-weight: bold;
-        color: var(--font);
+        color: #19202D;
         line-height: 45px;
     }
 
     .position:hover {
         cursor: pointer;
-        color: var(--font-dark-gray);
+        color: #6E8098;
         line-height: 45px;
     }
 
     .company {
         font-size: 18px;
         font-weight: 500;
-        color: var(--font-dark-gray);
+        color: #6E8098;
         line-height: 40px;
     }
 
     .location {
         font-size: 16px;
         font-weight: bold;
-        color: var(--violet);
+        color: #5964E0;
         padding: 10px 20px 20px 0;
         line-height: 75px;
     }

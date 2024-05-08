@@ -1,5 +1,3 @@
-@import url(../styles.css);
-
 main {
   width: 100%;
   height: 100vh;
@@ -43,7 +41,7 @@ header {
   position: relative;
   border-radius: 50px;
   display: inline-block;
-  background-color: var(--white);
+  background-color: #FFFFFF;
 }
 
 .toggle-btn label::before {
@@ -53,20 +51,20 @@ header {
   left: 4px;
   width: 14px;
   height: 14px;
-  background-color: var(--violet);
+  background-color: #5964E0;
   border-radius: 50%;
   transition: transform 0.3s;
 
 }
 
 .toggle-btn label:hover::before {
-  background-color: var(--light-violet);
+  background-color: #939BF4;
   transition: .1s ease-in-out;
 }
 
 
 .toggle-btn #toggle:checked+label {
-  background-color: var(--white);
+  background-color: #FFFFFF;
 }
 
 .toggle-btn #toggle:checked+label::before {

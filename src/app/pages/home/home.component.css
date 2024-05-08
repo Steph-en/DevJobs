@@ -1,5 +1,3 @@
-@import url(../../app.component.css);
-
 .filter {
     width: 100%;
     display: flex;
@@ -18,7 +16,7 @@
         flex-direction: row;
         align-items: center;
         transform: translate(0, 0);
-        background-color: var(--white);
+        background-color: #FFFFFF;
     }
 
     label {
@@ -123,7 +121,7 @@
 
             input:hover {
                 cursor: pointer;
-                background-color: var(--light-violet);
+                background-color: #939BF4;
                 transition: .3s ease-in-out;
             }
 
@@ -132,11 +130,11 @@
                 height: 48px;
                 color: var(--white);
                 border-radius: 8px;
-                background-color: var(--violet);
+                background-color: #5964E0;
 
                 &:hover {
                     cursor: pointer;
-                    background-color: var(--light-violet);
+                    background-color: #939BF4;
                 }
             }
         }

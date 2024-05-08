@@ -1,5 +1,3 @@
-@import url(../../../app.component.css);
-
 .head {
     position: relative;
     bottom: 31vh;
@@ -62,7 +60,7 @@
 
 .company a:hover {
     cursor: pointer;
-    background-color: var(--light-violet);
+    background-color: #939BF4;
     transition: .2s ease-in-out;
 }
 
