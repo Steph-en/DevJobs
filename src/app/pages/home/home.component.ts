@@ -17,13 +17,11 @@ export class HomeComponent {
 
   appService: AppService = inject(AppService);
 
-  filteredLocationList: JobLocation[] =[];
-
-  // applForm = new FormGroup()
+  filteredLocationList: JobLocation[] = [];
 
   constructor() {
     this.jobLocationList = this.appService.getAllJoblocations()
-    this.filteredLocationList =this.jobLocationList;
+    this.filteredLocationList = this.jobLocationList;
   }
 
   filterResults(text: string) {
