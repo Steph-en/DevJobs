@@ -13,6 +13,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  toggleCheckmark() {
+    const checkmark = document.querySelector('.checkmark');
+    if (checkmark) {
+      checkmark.classList.toggle('check');
+    }
+  }
+
   jobLocationList: JobLocation[] = []
 
   appService: AppService = inject(AppService);
