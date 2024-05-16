@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
     if (checkmark) {
       checkmark.classList.toggle('check');
     }
+    console.log("hello");
+    
   }
 
   jobLocationList: JobLocation[] = [];
@@ -36,8 +38,9 @@ export class HomeComponent implements OnInit {
 
     this.filteredLocationList = this.jobLocationList.filter(
       jobLocation => jobLocation.company.toLowerCase().includes(text.toLowerCase()) || jobLocation.position.toLowerCase().includes(text.toLowerCase())  
-      || jobLocation.location.toLowerCase().includes(text.toLowerCase())
+      || jobLocation.location.toLowerCase().includes(text.toLowerCase()) || jobLocation.contract === 'Full Time'
     )
     console.log(text);
+    
   }
 }
