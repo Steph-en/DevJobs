@@ -1,20 +1,28 @@
-<section class="filter">
-    <form>
-        <label class="company">
-            <img src="../../assets/desktop/icon-search.svg" alt="search icon">
-            <input type="text" placeholder="Filter by title, companies, expertise…" #filter />
-        </label>
-        <label class="location">
-            <img src="../../assets/desktop/icon-location.svg" alt="location icon">
-            <input type="text" placeholder="Filter by location…" #location />
-        </label>
-        <label class="contract">
-            <input type="checkbox" class="checkmark" (click)="toggleCheckmark()" #check />
-            <span>Full Time Only</span>
-            <button class="primary" type="button" (click)="filterResults(filter.value || location.value || check.value)">Search</button>
-        </label>
-    </form>
-</section>
-<section class="job">
-    <app-job-locations *ngFor="let jobLocation of filteredLocationList" [jobLocation]="jobLocation"/>
-</section>
+<div class="home">
+    <section class="filter">
+        <form>
+            <label class="company">
+                <img src="../../assets/desktop/icon-search.svg" alt="search icon">
+                <input type="text" placeholder="Filter by title, companies, expertise…" #filter />
+            </label>
+            <label class="location">
+                <img src="../../assets/desktop/icon-location.svg" alt="location icon">
+                <input type="text" placeholder="Filter by location…" #location />
+            </label>
+            <label class="contract">
+                <input type="checkbox" class="checkmark" (click)="toggleCheckmark()" #check />
+                <span>Full Time Only</span>
+                <button class="primary" type="button"
+                    (click)="filterResults(filter.value || location.value || check.value)">Search</button>
+            </label>
+        </form>
+    </section>
+
+    <section class="job">
+        <app-job-locations *ngFor="let jobLocation of filteredLocationList" [jobLocation]="jobLocation" />
+    </section>
+
+    <section class="load-more">
+        <button (click)="displayMoreJob()" *ngIf="noJobsLeft()">Load More</button>
+    </section>
+</div>

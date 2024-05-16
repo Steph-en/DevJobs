@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JobLocationsComponent } from '../../job-locations/job-locations.component';
 import { JobLocation } from '../../interface/job-location';
@@ -12,24 +12,46 @@ import { AppService } from '../../services/app.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+  jobLocationList: JobLocation[] = [];
+  filteredLocationList: JobLocation[] = [];
+  
+  currentJob = 0;
+  jobsToDisplay = 9;
+
+  constructor(private appService: AppService) {}
+
   toggleCheckmark() {
     const checkmark = document.querySelector('.checkmark');
     if (checkmark) {
       checkmark.classList.toggle('check');
     }
     console.log("hello");
-    
   }
 
-  jobLocationList: JobLocation[] = [];
-  filteredLocationList: JobLocation[] = [];
+  displayMoreJob() {
+    const nextJob = this.currentJob + this.jobsToDisplay;
 
-  constructor(private appService: AppService) {}
+    this.filteredLocationList = [...this.filteredLocationList, ...this.jobLocationList.slice(this.currentJob, nextJob)];
+    this.currentJob = nextJob;
+
+    console.log(this.currentJob);
+  }
+
+  noJobsLeft() {
+    return this.currentJob < this.jobLocationList.length;
+  }
 
   ngOnInit(): void {
     this.appService.getAllJoblocations().subscribe((jobLocations: JobLocation[]) => {
       this.jobLocationList = jobLocations;
-      this.filteredLocationList = jobLocations;
+      if(this.currentJob < this.jobLocationList.length) {
+
+        this.displayMoreJob()
+      } else {
+        console.log("No job left");
+      }
+
+      // this.filteredLocationList = jobLocations;
     });
   }
 
