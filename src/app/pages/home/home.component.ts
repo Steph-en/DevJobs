@@ -1,14 +1,13 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JobLocationsComponent } from '../../job-locations/job-locations.component';
 import { JobLocation } from '../../interface/job-location';
 import { AppService } from '../../services/app.service';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, JobLocationsComponent, FormsModule],
+  imports: [CommonModule, JobLocationsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -29,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.appService.getAllJoblocations().subscribe((jobLocations: JobLocation[]) => {
       this.jobLocationList = jobLocations;
       this.filteredLocationList = jobLocations;
+
     });
   }
 
@@ -36,7 +36,8 @@ export class HomeComponent implements OnInit {
     if (!text) this.filteredLocationList = this.jobLocationList;
 
     this.filteredLocationList = this.jobLocationList.filter(
-      jobLocation => jobLocation?.company.toLowerCase().includes(text.toLowerCase()) || jobLocation?.position.toLowerCase().includes(text.toLowerCase())  || jobLocation?.location.toLowerCase().includes(text.toLowerCase())
+      jobLocation => jobLocation?.company.toLowerCase().includes(text.toLowerCase()) 
+      || jobLocation?.position.toLowerCase().includes(text.toLowerCase())  || jobLocation?.location.toLowerCase().includes(text.toLowerCase())
     )
   }
 }
