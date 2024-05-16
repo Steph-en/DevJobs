@@ -14,7 +14,7 @@
 
 ## General
 node_modules
-.angular/
+#.angular/
 *.log*
 .nuxt
 .nitro
