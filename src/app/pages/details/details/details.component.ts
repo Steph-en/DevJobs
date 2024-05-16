@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppService } from '../../../services/app.service';
@@ -11,13 +11,15 @@ import { JobLocation } from '../../../interface/job-location';
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
-export class DetailsComponent {
-  route: ActivatedRoute = inject(ActivatedRoute);
-  appService = inject(AppService);
+export class DetailsComponent implements OnInit{
   jobLocation: JobLocation | undefined;
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private appService: AppService) {}
+
+  ngOnInit(): void {
     const jobLocationId = Number(this.route.snapshot.params['id']);
-    this.jobLocation = this.appService.getJobLocationById(jobLocationId);
+    this.appService.getJobById(jobLocationId).subscribe((jobLocation: JobLocation | undefined) => {
+      this.jobLocation = jobLocation;
+    });
   }
 }
