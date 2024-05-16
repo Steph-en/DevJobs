@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  jobLocationList: JobLocation[] = []
+  jobLocationList: JobLocation[] = [];
   filteredLocationList: JobLocation[] = [];
 
   constructor(private appService: AppService) {}
@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
     this.appService.getAllJoblocations().subscribe((jobLocations: JobLocation[]) => {
       this.jobLocationList = jobLocations;
       this.filteredLocationList = jobLocations;
-
     });
   }
 
@@ -36,8 +35,9 @@ export class HomeComponent implements OnInit {
     if (!text) this.filteredLocationList = this.jobLocationList;
 
     this.filteredLocationList = this.jobLocationList.filter(
-      jobLocation => jobLocation?.company.toLowerCase().includes(text.toLowerCase()) 
-      || jobLocation?.position.toLowerCase().includes(text.toLowerCase())  || jobLocation?.location.toLowerCase().includes(text.toLowerCase())
+      jobLocation => jobLocation.company.toLowerCase().includes(text.toLowerCase()) || jobLocation.position.toLowerCase().includes(text.toLowerCase())  
+      || jobLocation.location.toLowerCase().includes(text.toLowerCase())
     )
+    console.log(text);
   }
 }
