@@ -9,8 +9,12 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 
+# Compiled output
+/dist/
+
 ## General
 node_modules
+#.angular/
 *.log*
 .nuxt
 .nitro
@@ -33,3 +37,6 @@ coverage/
 
 ## Histoire
 .histoire
+
+# Other generated files
+package-lock.json
