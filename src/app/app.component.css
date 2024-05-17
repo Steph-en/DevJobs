@@ -1,3 +1,25 @@
+:root {
+  --check: #F4F6F8;
+  --font: #19202D;
+  --carb-bg: #FFFFFF;
+  --violet: #5964E0;
+  --white: #FFFFFF;
+  --light-violet: #939BF4;
+  --font-dark-gray: #6E8098;
+  --bg-desktop-main: #F4F6F8;
+}
+
+.dark {
+  --font: #FFFFFF;
+  --check: #6E8098;
+  --white: #FFFFFF;
+  --violet: #5964E0;
+  --card-bg: #19202D;
+  --light-violet: #939BF4;
+  --font-dark-gray: #6E8098;
+  --bg-desktop-main: #121721;
+}
+
 main {
   width: 100%;
   height: 100vh;
@@ -42,7 +64,7 @@ header {
   position: relative;
   border-radius: 50px;
   display: inline-block;
-  background-color: #FFFFFF;
+  background-color: var(--white);
 }
 
 .toggle-btn label::before {
@@ -52,20 +74,20 @@ header {
   left: 4px;
   width: 12px;
   height: 12px;
-  background-color: #5964E0;
+  background-color: var(--violet);
   border-radius: 50%;
   transition: transform 0.3s;
 
 }
 
 .toggle-btn label:hover::before {
-  background-color: #939BF4;
+  background-color: var(--light-violet);
   transition: .1s ease-in-out;
 }
 
 
 .toggle-btn #toggle:checked+label {
-  background-color: #FFFFFF;
+  background-color: var(--white);
 }
 
 .toggle-btn #toggle:checked+label::before {
