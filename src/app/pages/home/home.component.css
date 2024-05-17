@@ -1,7 +1,7 @@
 :root {
     --check: #F4F6F8;
     --font: #19202D;
-    --carb-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
     --violet: #5964E0;
     --white: #FFFFFF;
     --light-violet: #939BF4;
@@ -44,7 +44,7 @@ form {
     flex-direction: row;
     align-items: center;
     transform: translate(0, 0);
-    background-color: var(--carb-bg);
+    background-color: var(--card-bg);
 }
 
 label {
@@ -69,7 +69,8 @@ label {
 .company input {
     width: 80%;
     font-size: 20px;
-    color: #19202D;
+    color: var(--font);
+    background-color: var(--card-bg);
     letter-spacing: .8px;
 }
 
@@ -112,6 +113,7 @@ label {
     width: 70%;
     font-size: 20px;
     color: var(--font);
+    background-color: var(--card-bg);
     letter-spacing: .8px;
 
 }
