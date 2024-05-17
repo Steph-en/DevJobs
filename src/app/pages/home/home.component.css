@@ -1,6 +1,7 @@
 :root {
     --check: #F4F6F8;
     --font: #19202D;
+    --carb-bg: #FFFFFF;
     --violet: #5964E0;
     --white: #FFFFFF;
     --light-violet: #939BF4;
@@ -9,13 +10,14 @@
 }
 
 .dark {
-    --check: #F4F6F8;
-    --font: #19202D;
+    --check: #6E8098;
+    --font: #FFFFFF;
+    --card-bg: #19202D;
     --violet: #5964E0;
     --white: #FFFFFF;
     --light-violet: #939BF4;
     --font-dark-gray: #6E8098;
-    --bg-desktop-main: #F4F6F8;
+    --bg-desktop-main: #121721;
 }
 
 .home {
@@ -42,7 +44,7 @@ form {
     flex-direction: row;
     align-items: center;
     transform: translate(0, 0);
-    background-color: var(--white);
+    background-color: var(--carb-bg);
 }
 
 label {
@@ -204,4 +206,9 @@ label {
     color: var(--white);
     border-radius: 5px;
     background-color: var(--violet);
+}
+
+.load-more button:hover{
+    cursor: pointer;
+    background-color: var(--light-violet);
 }

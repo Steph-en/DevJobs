@@ -1,21 +1,23 @@
 :root {
-    --check: #F4F6F8;
-    --font: #19202D;
-    --violet: #5964E0;
-    --white: #FFFFFF;
-    --light-violet: #939BF4;
-    --font-dark-gray: #6E8098;
-    --bg-desktop-main: #F4F6F8;
+  --check: #F4F6F8;
+  --font: #19202D;
+  --carb-bg: #FFFFFF;
+  --violet: #5964E0;
+  --white: #FFFFFF;
+  --light-violet: #939BF4;
+  --font-dark-gray: #6E8098;
+  --bg-desktop-main: #F4F6F8;
 }
 
 .dark {
-    --check: #F4F6F8;
-    --font: #19202D;
-    --violet: #5964E0;
-    --white: #FFFFFF;
-    --light-violet: #939BF4;
-    --font-dark-gray: #6E8098;
-    --bg-desktop-main: #F4F6F8;
+  --font: #FFFFFF;
+  --check: #6E8098;
+  --white: #FFFFFF;
+  --violet: #5964E0;
+  --card-bg: #19202D;
+  --light-violet: #939BF4;
+  --font-dark-gray: #6E8098;
+  --bg-desktop-main: #121721;
 }
 
 main {

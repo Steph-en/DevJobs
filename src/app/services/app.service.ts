@@ -9,6 +9,7 @@ import { JobLocation } from '../interface/job-location';
 })
 
 export class AppService {
+
   private jobLocationList = '/assets/data.json';
   
   constructor(private http: HttpClient) { }
