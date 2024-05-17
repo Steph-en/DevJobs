@@ -1,3 +1,23 @@
+:root {
+    --check: #F4F6F8;
+    --font: #19202D;
+    --violet: #5964E0;
+    --white: #FFFFFF;
+    --light-violet: #939BF4;
+    --font-dark-gray: #6E8098;
+    --bg-desktop-main: #F4F6F8;
+}
+
+.dark {
+    --check: #F4F6F8;
+    --font: #19202D;
+    --violet: #5964E0;
+    --white: #FFFFFF;
+    --light-violet: #939BF4;
+    --font-dark-gray: #6E8098;
+    --bg-desktop-main: #F4F6F8;
+}
+
 .head {
     position: relative;
     bottom: 32vh;
@@ -6,7 +26,7 @@
     display: flex;
     align-items: center;
     border-radius: 0 10px 10px 10px;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .logo {
@@ -21,7 +41,6 @@
 
 .logo img{
     width: 90px;
-
 }
 
 .company {
@@ -35,12 +54,12 @@
 
 .company p {
     font-size: 24px;
-    color: #19202D;
+    color: var(--font);
     font-weight: bold;
 }
 
 .company span {
-    color: #6E8098;
+    color: var(--font-dark-gray);
     font-size: 16px;
     text-transform: lowercase;
     font-weight: 400;
