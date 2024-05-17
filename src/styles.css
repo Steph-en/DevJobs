@@ -6,6 +6,7 @@
 :root {
     --check: #F4F6F8;
     --font: #19202D;
+    --card-bg: #FFFFFF;
     --violet: #5964E0;
     --white: #FFFFFF;
     --light-violet: #939BF4;
@@ -14,13 +15,14 @@
 }
 
 .dark {
-    --check: #F4F6F8;
-    --font: #19202D;
+    --check: #6E8098;
+    --font: #FFFFFF;
+    --card-bg: #19202D;
     --violet: #5964E0;
     --white: #FFFFFF;
     --light-violet: #939BF4;
     --font-dark-gray: #6E8098;
-    --bg-desktop-main: #F4F6F8;
+    --bg-desktop-main: #121721;
 }
 
 *,
@@ -42,3 +44,7 @@ body {
     height: 100vh;
     width: 100%;
 }
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 600px) {}

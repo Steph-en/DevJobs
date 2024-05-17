@@ -13,8 +13,8 @@
 /dist/
 
 ## General
-node_modules
 #.angular/
+node_modules
 *.log*
 .nuxt
 .nitro
