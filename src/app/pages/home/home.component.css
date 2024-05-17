@@ -1,3 +1,5 @@
+@import url(../../../styles.css);
+
 .home {
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@ form {
     flex-direction: row;
     align-items: center;
     transform: translate(0, 0);
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 label {
@@ -47,7 +49,7 @@ label {
 .company input {
     width: 80%;
     font-size: 20px;
-    color: #19202D;
+    color: var(--font);
     letter-spacing: .8px;
 }
 
@@ -64,21 +66,19 @@ label {
     height: 100%;
     margin: 0 1rem;
     position: fixed;
-    background-color: #6e8098;
+    background-color: var(--font-dark-gray);
 }
 
 .company:hover {
     cursor: pointer;
 }
 
-
 .location {
+    gap: 20px;
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-
 }
 
 .location img {
@@ -89,7 +89,7 @@ label {
 .location input {
     width: 70%;
     font-size: 20px;
-    color: #19202D;
+    color: var(--font);
     letter-spacing: .8px;
 
 }
@@ -107,7 +107,7 @@ label {
     height: 100%;
     margin: 0 1rem;
     position: fixed;
-    background-color: #6e8098;
+    background-color: var(--font-dark-gray);
 }
 
 .location:hover {
@@ -118,7 +118,7 @@ label {
     width: 28%;
     display: flex;
     font-weight: 500;
-    color: #19202D;
+    color: var(--font);
     align-items: center;
     justify-content: space-between;
 }
@@ -127,12 +127,12 @@ label {
     width: 24px;
     height: 24px;
     border-radius: 3px;
-    background-color: #F4F6F8;
+    background-color: var(--check);
 }
 
 .check{
     background-size:auto;
-    background-color: #5964E0;
+    background-color: var(--violet);
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../../../assets/desktop/icon-check.svg);
@@ -140,7 +140,7 @@ label {
 
 .checkmark:hover{
     cursor: pointer;
-    background-color: #939BF4;
+    background-color: var(--light-violet);
     transition: .2s ease-in-out;
 }
 
@@ -149,13 +149,13 @@ label {
     height: 48px;
     color: var(--white);
     border-radius: 8px;
-    background-color: #5964E0;
+    background-color: var(--violet);
 
 }
 
 .contract .primary:hover {
     cursor: pointer;
-    background-color: #939BF4;
+    background-color: var(--light-violet);
 }
 
 .job {
@@ -186,7 +186,7 @@ label {
     width: 141px;
     height: 50px;
     padding: 5px;
-    background-color: #5964E0;
-    color: #FFFFFF;
+    background-color: var(--violet);
+    color: var(--white);
     border-radius: 5px;
 }

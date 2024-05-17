@@ -1,3 +1,5 @@
+@import url(../../../../styles.css);
+
 .head {
     position: relative;
     bottom: 32vh;
@@ -6,7 +8,7 @@
     display: flex;
     align-items: center;
     border-radius: 0 10px 10px 10px;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .logo {
@@ -21,7 +23,6 @@
 
 .logo img{
     width: 90px;
-
 }
 
 .company {
@@ -35,12 +36,12 @@
 
 .company p {
     font-size: 24px;
-    color: #19202D;
+    color: var(--font);
     font-weight: bold;
 }
 
 .company span {
-    color: #6E8098;
+    color: var(--font-dark-gray);
     font-size: 16px;
     text-transform: lowercase;
     font-weight: 400;
@@ -60,7 +61,7 @@
 
 .company a:hover {
     cursor: pointer;
-    background-color: #939BF4;
+    background-color: var(--light-violet);
     transition: .2s ease-in-out;
 }
 
@@ -74,7 +75,7 @@
     padding: 50px;
     border-radius: 10px;
     flex-direction: column;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .apply {
@@ -84,19 +85,19 @@
 
 .apply p {
     font-size: 28px;
-    color: #19202D;
+    color: var(--font);
     font-weight: bold;
 }
 
 .apply .post {
-    color: #6E8098;
+    color: var(--font-dark-gray);
     font-size: 16px;
     font-weight: 500;
 }
 
 .apply span {
     font-size: 14px;
-    color: #5964E0;
+    color: var(--violet);
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -108,20 +109,20 @@
     font-weight: bold;
     border-radius: 5px;
     display: flex;
-    color: #FFFFFF;
+    color: var(--white);
     align-items: center;
     justify-content: center;
-    background-color: #5964E0;
+    background-color: var(--violet);
 }
 
 .apply a:hover {
     cursor: pointer;
-    background-color: #939BF4;
+    background-color: var(--light-violet);
     transition: .2s ease-in-out;
 }
 
 .description {
-    color: #6E8098;
+    color: var(--font-dark-gray);
     font-size: 16px;
 }
 
@@ -132,18 +133,18 @@
 }
 
 .reqirements h3 {
-    color: #19202D;
+    color: var(--font);
     font-size: 20px;
     font-weight: bold;
 }
 
 .reqirements p {
-    color: #6E8098;
+    color: var(--font-dark-gray);
     font-size: 16px;
 }
 
 .reqirements li {
-    color: #5964E0;
+    color: var(--violet);
     font-size: 16px;
 }
 
@@ -154,19 +155,19 @@
 }
 
 .item h3 {
-    color: #19202D;
+    color: var(--font);
     font-size: 20px;
     font-weight: bold;
     text-transform: capitalize;
 }
 
 .item p {
-    color: #6E8098;
+    color: var(--font-dark-gray);
     font-size: 16px;
 }
 
 .item li {
-    color: #5964E0;
+    color: var(--violet);
     font-size: 16px;
     list-style: none;
     display: flex;
@@ -183,7 +184,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .foot {
@@ -196,7 +197,7 @@
 }
 
 .foot p {
-    color: #19202D;
+    color: var(--font);
     font-size: 20px;
     font-weight: bold;
 }
@@ -208,14 +209,14 @@
     font-weight: bold;
     border-radius: 5px;
     display: flex;
-    color: #FFFFFF;
+    color: var(--white);
     align-items: center;
     justify-content: center;
-    background-color: #5964E0;
+    background-color: var(--violet);
 }
 
 .foot a:hover {
     cursor: pointer;
-    background-color: #939BF4;
+    background-color: var(--light-violet);
     transition: .2s ease-in-out;
 }
