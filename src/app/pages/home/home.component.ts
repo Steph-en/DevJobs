@@ -14,11 +14,11 @@ import { AppService } from '../../services/app.service';
 export class HomeComponent implements OnInit {
   jobLocationList: JobLocation[] = [];
   filteredLocationList: JobLocation[] = [];
-  
+
   currentJob = 0;
   jobsToDisplay = 9;
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService) { }
 
   toggleCheckmark() {
     const checkmark = document.querySelector('.checkmark');
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.appService.getAllJoblocations().subscribe((jobLocations: JobLocation[]) => {
       this.jobLocationList = jobLocations;
-      if(this.currentJob < this.jobLocationList.length) {
+      if (this.currentJob < this.jobLocationList.length) {
 
         this.displayMoreJob()
       } else {
@@ -58,11 +58,9 @@ export class HomeComponent implements OnInit {
   filterResults(text: string) {
     if (!text) this.filteredLocationList = this.jobLocationList;
 
-    this.filteredLocationList = this.jobLocationList.filter(
-      jobLocation => jobLocation.company.toLowerCase().includes(text.toLowerCase()) || jobLocation.position.toLowerCase().includes(text.toLowerCase())  
-      || jobLocation.location.toLowerCase().includes(text.toLowerCase()) || jobLocation.contract === 'Full Time'
+    this.filteredLocationList = this.jobLocationList.filter(jobLocation => jobLocation.company.toLowerCase().includes(text.toLowerCase())
+      || jobLocation.position.toLowerCase().includes(text.toLowerCase()) || jobLocation.location.toLowerCase().includes(text.toLowerCase()) || jobLocation.contract.toLowerCase() == 'Full Time'  
     )
     console.log(text);
-    
   }
 }
