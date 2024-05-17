@@ -97,3 +97,15 @@ header {
 .toggle-btn:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 1024px) {
+    header {
+      background-image: url(../assets/tablet/bg-pattern-header.svg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    background-image: url(../assets/tablet/bg-pattern-header.svg);
+  }
+}
