@@ -24,6 +24,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -35,7 +36,7 @@
 }
 
 form {
-    margin: 6.5em 0 4em 0;
+    margin: 5.5em 0 4em 0;
     width: 78%;
     height: 8vh;
     display: flex;
@@ -184,7 +185,7 @@ label {
     gap: 60px 30px;
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
