@@ -102,7 +102,6 @@ label {
     align-items: center;
     justify-content: center;
     gap: 20px;
-
 }
 
 .location img {
@@ -142,6 +141,7 @@ label {
 .contract {
     width: 28%;
     display: flex;
+    font-size: 20px;
     font-weight: 500;
     color: var(--font);
     align-items: center;
@@ -214,4 +214,81 @@ label {
 .load-more button:hover{
     cursor: pointer;
     background-color: var(--light-violet);
+}
+
+@media screen and (max-width: 1024px) {
+    form{
+        width: 84%;
+    }
+
+    .company{
+        width: 30%;
+    }
+
+    .company input {
+        font-size: 16px;
+        letter-spacing: .8px;
+    }
+
+    .company::after {
+        content: '';
+        top: 0;
+        right: 68%;
+        opacity: .2;
+        width: .1rem;
+        height: 100%;
+        margin: 0 1rem;
+        position: fixed;
+        background-color: var(--font-dark-gray);
+    }
+
+    .location{
+        width: 36%;
+    }
+    
+    .location input {
+        font-size: 16px;
+    }
+
+    .location::after {
+        content: '';
+        top: 0;
+        right: 36%;
+        opacity: .2;
+        width: .1rem;
+        height: 100%;
+        margin: 0 1rem;
+        position: fixed;
+        background-color: var(--font-dark-gray);
+    }
+
+    .contract{
+        width: 36%;
+    }
+
+    .contract p{
+        font-size: 16px;
+    }
+
+    .contract span{
+        display: none;
+    }
+
+    .contract .primary {
+        width: 80px;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .job{
+        width: 84%;
+        gap: 60px 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    background-image: url(../../../assets/tablet/bg-pattern-header.svg);
+  }
 }
