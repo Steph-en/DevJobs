@@ -54,6 +54,10 @@ label {
     align-items: center;
 }
 
+.mobile-filter {
+    display: none;
+}
+
 .company {
     gap: 20px;
     width: 35%;
@@ -148,22 +152,22 @@ label {
     justify-content: space-between;
 }
 
-.checkmark{
+.checkmark {
     width: 24px;
     height: 24px;
     border-radius: 3px;
     background-color: var(--check);
 }
 
-.check{
-    background-size:auto;
+.check {
+    background-size: auto;
     background-color: var(--violet);
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../../../assets/desktop/icon-check.svg);
 }
 
-.checkmark:hover{
+.checkmark:hover {
     cursor: pointer;
 }
 
@@ -201,7 +205,7 @@ label {
     justify-content: center;
 }
 
-.load-more button{
+.load-more button {
     width: 141px;
     height: 50px;
     padding: 5px;
@@ -211,17 +215,21 @@ label {
     background-color: var(--violet);
 }
 
-.load-more button:hover{
+.load-more button:hover {
     cursor: pointer;
     background-color: var(--light-violet);
 }
 
 @media screen and (max-width: 1024px) {
-    form{
+    form {
         width: 84%;
     }
 
-    .company{
+    .mobile-filter {
+        display: none;
+    }
+
+    .company {
         width: 30%;
     }
 
@@ -242,10 +250,10 @@ label {
         background-color: var(--font-dark-gray);
     }
 
-    .location{
+    .location {
         width: 36%;
     }
-    
+
     .location input {
         font-size: 16px;
     }
@@ -262,15 +270,15 @@ label {
         background-color: var(--font-dark-gray);
     }
 
-    .contract{
+    .contract {
         width: 36%;
     }
 
-    .contract p{
+    .contract p {
         font-size: 16px;
     }
 
-    .contract span{
+    .contract span {
         display: none;
     }
 
@@ -281,14 +289,63 @@ label {
         border-radius: 5px;
     }
 
-    .job{
+    .job {
         width: 84%;
         gap: 60px 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
-  header {
-    background-image: url(../../../assets/tablet/bg-pattern-header.svg);
-  }
+    form {
+        width: 88%;
+    }
+
+    .company {
+        display: none;
+    }
+
+    .location {
+        display: none;
+    }
+
+    .contract {
+        display: none;
+    }
+
+    .mobile-filter {
+        width: 100%;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobile-filter input {
+        font-size: 16px;
+    }
+
+    .mobile-filter input:focus {
+        outline: none;
+    }
+
+    .mobile-filter .second {
+        width: 48px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: var(--violet);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-filter .second img {
+        width: 20px;
+        height: 20px;
+        color: var(--white);
+    }
+
+    .job {
+        width: 84%;
+        gap: 60px 20px;
+    }
 }
