@@ -37,7 +37,7 @@
 
 form {
     margin: 5.5em 0 4em 0;
-    width: 78%;
+    width: 70%;
     height: 8vh;
     display: flex;
     padding: 20px;
@@ -182,10 +182,10 @@ label {
 }
 
 .job {
-    gap: 60px 30px;
+    gap: 60px 33px;
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 70%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
