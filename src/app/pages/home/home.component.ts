@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JobLocationsComponent } from '../../job-locations/job-locations.component';
 import { JobLocation } from '../../interface/job-location';
