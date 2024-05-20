@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   filteredLocationList: JobLocation[] = [];
 
   currentJob = 0;
-  jobsToDisplay = 9;
+  jobsToDisplay = 6;
 
   constructor(private appService: AppService) { }
 
@@ -45,22 +45,36 @@ export class HomeComponent implements OnInit {
     this.appService.getAllJoblocations().subscribe((jobLocations: JobLocation[]) => {
       this.jobLocationList = jobLocations;
       if (this.currentJob < this.jobLocationList.length) {
-
         this.displayMoreJob()
       } else {
         console.log("No job left");
       }
-
       // this.filteredLocationList = jobLocations;
     });
+
+    const input = document.querySelector('.input') as HTMLInputElement | null;
+
+    if (input) {
+      this.updatePlaceholder(input);
+      // Update the placeholder text when the window is resized
+      window.addEventListener('resize', () => this.updatePlaceholder(input));
+    }
+  }
+
+  updatePlaceholder(input: HTMLInputElement) {
+    if (window.innerWidth <= 1024) {
+      input.placeholder = 'Filter by title...';
+    } else {
+      input.placeholder = 'Filter by title, companies, expertise…';
+    }
   }
 
   filterResults(text: string) {
     if (!text) this.filteredLocationList = this.jobLocationList;
 
     this.filteredLocationList = this.jobLocationList.filter(jobLocation => jobLocation.company.toLowerCase().includes(text.toLowerCase())
-      || jobLocation.position.toLowerCase().includes(text.toLowerCase()) || jobLocation.location.toLowerCase().includes(text.toLowerCase()) 
-      || jobLocation.contract.toLowerCase() == 'Full Time'  
+      || jobLocation.position.toLowerCase().includes(text.toLowerCase()) || jobLocation.location.toLowerCase().includes(text.toLowerCase())
+      || jobLocation.contract.toLowerCase() == 'Full Time'
     )
     console.log(text);
   }

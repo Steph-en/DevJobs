@@ -203,8 +203,8 @@
 
 .footer {
     margin: 4em 0 0 0;
-    padding: 20px;
-    width: 200vw;
+    padding: 20px 0;
+    width: 100vw;
     height: 140px;
     display: flex;
     align-items: center;
@@ -245,3 +245,21 @@
     background-color: var(--light-violet);
     transition: .2s ease-in-out;
 }
+
+@media screen and (max-width: 1024px) {
+    .head{
+        width: 84vw;
+    }
+
+    .details{
+        width: 84vw;
+    }
+
+    .footer
+
+    .foot{
+        width: 84vw;
+    }
+}
+
+@media screen and (max-width: 600px) {}

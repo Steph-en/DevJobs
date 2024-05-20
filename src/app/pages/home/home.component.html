@@ -3,7 +3,7 @@
         <form>
             <label class="company">
                 <img src="../../assets/desktop/icon-search.svg" alt="search icon">
-                <input type="text" placeholder="Filter by title, companies, expertise…" #filter />
+                <input class="input" type="text" placeholder="" #filter />
             </label>
             <label class="location">
                 <img src="../../assets/desktop/icon-location.svg" alt="location icon">
@@ -11,7 +11,7 @@
             </label>
             <label class="contract">
                 <input type="checkbox" class="checkmark" (click)="toggleCheckmark()" #check />
-                <span>Full Time Only</span>
+                <p>Full Time <span>Only</span></p>
                 <button class="primary" type="button" (click)="filterResults(filter.value || location.value || check.value)">Search</button>
             </label>
         </form>
