@@ -22,7 +22,7 @@
 
 .role {
     position: relative;
-    width: 415px;
+    width: 473px;
     height: 258px;
     padding: 50px 30px 20px 30px;
     border-radius: 6px;
@@ -75,7 +75,7 @@
 
 @media screen and (max-width: 1024px) {
     .role {
-        width: 420px;
+        width: 40vw;
         height: 230px;
         border-radius: 6px;
     }
