@@ -1,6 +1,15 @@
 <div class="home">
     <section class="filter">
         <form>
+            <label class="mobile-filter">
+                <input type="text" style="background-color: var(--card-bg);" placeholder="Filter by title..." #filter>
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 25%;">
+                    <img src="../../../assets/mobile/icon-filter.svg" alt="filter icon">
+                    <p class="second" type="button" (click)="filterResults(filter.value || location.value || check.value)">
+                        <img src="../../../assets/desktop/icon-search.svg" alt="search icon">
+                    </p>
+                </div>
+            </label>
             <label class="company">
                 <img src="../../assets/desktop/icon-search.svg" alt="search icon">
                 <input class="input" type="text" placeholder="" #filter />
@@ -12,7 +21,8 @@
             <label class="contract">
                 <input type="checkbox" class="checkmark" (click)="toggleCheckmark()" #check />
                 <p>Full Time <span>Only</span></p>
-                <button class="primary" type="button" (click)="filterResults(filter.value || location.value || check.value)">Search</button>
+                <button class="primary" type="button"
+                    (click)="filterResults(filter.value || location.value || check.value)">Search</button>
             </label>
         </form>
     </section>
