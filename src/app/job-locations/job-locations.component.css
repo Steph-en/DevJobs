@@ -102,4 +102,31 @@
     }
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+    .role {
+        width: 88vw;
+        height: 230px;
+        border-radius: 6px;
+    }
+
+    .posted {
+        font-size: 16px;
+        line-height: 35px;
+    }
+    
+    .position {
+        line-height: 40px;
+    }
+    
+    .company {
+        font-size: 16px;
+        line-height: 35px;
+        color: var(--font-dark-gray);
+    }
+    
+    .location {
+        font-size: 14px;
+        line-height: 70px;
+        padding: 0px 20px 20px 0;
+    }
+}
