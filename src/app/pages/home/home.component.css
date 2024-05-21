@@ -297,10 +297,9 @@ label {
 
 @media screen and (max-width: 600px) {
     form {
-        width: 88%;
-        height: 9vh;
+        height: 28%;
         padding: 20px 14px;
-        margin: 4.5em 0 4em 0;
+        margin: 25% 0 16% 0;
     }
 
     .company {
@@ -353,5 +352,13 @@ label {
     .job {
         width: 84%;
         gap: 60px 20px;
+    }
+
+    .load-more {
+        margin: 190% 0;
+    }
+    
+    .load-more button {
+        margin: 5% 0;
     }
 }
