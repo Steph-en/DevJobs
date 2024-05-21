@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
     if (filters) {
       filters.style.display = filters.style.display === 'block' ? 'none' : 'block';
     }
-    console.log("fiskdf");
   }
 
   toggleCheckmark() {
