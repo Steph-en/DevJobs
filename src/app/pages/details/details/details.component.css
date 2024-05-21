@@ -20,7 +20,7 @@
     --bg-desktop-main: #121721;
 }
 
-.details-page{
+.details-page {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -49,7 +49,7 @@
     border-radius: 0 0 0 10px;
 }
 
-.logo img{
+.logo img {
     width: 90px;
 }
 
@@ -247,19 +247,107 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .head{
+    .head {
         width: 84vw;
     }
 
-    .details{
+    .details {
         width: 84vw;
     }
 
-    .footer
-
-    .foot{
+    .footer .foot {
         width: 84vw;
     }
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+    .head {
+        position: relative;
+        width: 86%;
+        height: 30em;
+        border-radius: 6px;
+        margin: 5.5em 0 1.5em 0;
+    }
+
+    .logo {
+        position: absolute;
+        top: -26px;
+        left: 40%;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+    }
+    
+    .logo img {
+        object-fit: scale-down;
+    }
+
+    .company {
+        width: 100%;
+        height: 205px;
+        display: flex;
+        padding: 35px 50px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .company p {
+        font-size: 24px;
+        color: var(--font);
+        font-weight: bold;
+        line-height: 35px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .company span {
+        color: var(--font-dark-gray);
+        font-size: 16px;
+        text-transform: lowercase;
+        font-weight: 400;
+    }
+
+    .details {
+        gap: 40px;
+        width: 86%;
+        height: auto;
+        display: flex;
+        padding: 30px;
+        border-radius: 10px;
+        flex-direction: column;
+        background-color: var(--card-bg);
+    }
+    
+    .apply {
+        gap: 40px;
+        flex-direction: column;
+    }
+    
+    .apply p {
+        line-height: 1.3em;
+        font-size: 22px;
+    }
+
+    .apply a {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        display: flex;
+        color: var(--white);
+        align-items: center;
+        justify-content: center;
+        background-color: var(--violet);
+    }
+
+    .footer p{
+        display: none;        
+    }
+
+    .footer a{
+        width: 100%;
+    }
+}

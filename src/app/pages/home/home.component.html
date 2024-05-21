@@ -3,7 +3,7 @@
         <form>
             <label class="mobile-filter">
                 <input type="text" style="background-color: var(--card-bg);" placeholder="Filter by title..." #filter>
-                <div style="display: flex; align-items: center; justify-content: space-between; width: 25%;">
+                <div class="filter" style="display: flex; align-items: center; justify-content: space-between; width: 25%;">
                     <img src="../../../assets/mobile/icon-filter.svg" alt="filter icon">
                     <p class="second" type="button" (click)="filterResults(filter.value || location.value || check.value)">
                         <img src="../../../assets/mobile/icon-search.svg" alt="search icon">
