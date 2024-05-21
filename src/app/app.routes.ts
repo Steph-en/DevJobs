@@ -14,12 +14,6 @@ export const routes: Routes = [
         component: DetailsComponent,
         title: 'Details Page | Devjobs',
     },
-    // {
-    //     path: '',
-    //     redirectTo: '/home',
-    //     pathMatch: 'full'
-
-    // },
     {
         path: '**',
         component: PageNotFoundComponent,
