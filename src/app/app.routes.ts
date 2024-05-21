@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'home',
         component: HomeComponent,
         title: 'Home Page | DevJobs',
     },
@@ -13,6 +13,12 @@ export const routes: Routes = [
         path: 'details/:id',
         component: DetailsComponent,
         title: 'Details Page | Devjobs',
+    },
+    {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+
     },
     {
         path: '**',
