@@ -20,12 +20,20 @@ export class HomeComponent implements OnInit {
 
   constructor(private appService: AppService) { }
 
+  toggleFields() {
+    const filters = document.querySelector(".backFilter") as HTMLElement;
+    if (filters) {
+      filters.style.display = filters.style.display === 'block' ? 'none' : 'block';
+    }
+    console.log("fiskdf");
+  }
+
   toggleCheckmark() {
     const checkmark = document.querySelector('.checkmark');
     if (checkmark) {
       checkmark.classList.toggle('check');
     }
-    console.log("hello");
+    console.log("dkjkndfk");
   }
 
   displayMoreJob() {
@@ -76,6 +84,7 @@ export class HomeComponent implements OnInit {
       || jobLocation.position.toLowerCase().includes(text.toLowerCase()) || jobLocation.location.toLowerCase().includes(text.toLowerCase())
       || jobLocation.contract.toLowerCase() == 'Full Time'
     )
+    this.toggleFields();
     console.log(text);
   }
 }

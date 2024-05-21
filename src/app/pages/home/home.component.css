@@ -302,6 +302,51 @@ label {
         margin: 25% 0 16% 0;
     }
 
+    .backFilter {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 100vw;
+        height: 120vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #121721af;
+        transform: translate(8%, -13%);
+    }
+
+    .filterFields {
+        width: 90%;
+        height: 217px;
+        margin: 80% auto;
+        padding: 20px;
+        display: flex;
+        border-radius: 6px;
+        flex-direction: column;
+        background-color: var(--card-bg);
+    }
+
+    .filterFields .loc {
+        gap: 20px;
+        margin: 0 0 1.4em 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .filterFields .checkBox {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filterFields .primary {
+        width: 100%;
+        height: 48px;
+        color: var(--white);
+        border-radius: 8px;
+        background-color: var(--violet);
+    }
+
     .company {
         display: none;
     }
@@ -330,8 +375,8 @@ label {
         outline: none;
     }
 
-    .mobile-filter .filter img{
-        fill:var(--font-dark-gray);
+    .mobile-filter .filter img {
+        fill: var(--font-dark-gray);
     }
 
     .mobile-filter .second {
@@ -352,12 +397,13 @@ label {
     .job {
         width: 84%;
         gap: 60px 20px;
+        z-index: -1;
     }
 
     .load-more {
-        margin: 190% 0;
+        margin: 188% 0;
     }
-    
+
     .load-more button {
         margin: 5% 0;
     }
