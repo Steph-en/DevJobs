@@ -298,6 +298,9 @@ label {
 @media screen and (max-width: 600px) {
     form {
         width: 88%;
+        height: 9vh;
+        padding: 20px 14px;
+        margin: 4.5em 0 4em 0;
     }
 
     .company {
@@ -326,6 +329,10 @@ label {
 
     .mobile-filter input:focus {
         outline: none;
+    }
+
+    .mobile-filter .filter img{
+        fill:var(--font-dark-gray);
     }
 
     .mobile-filter .second {
