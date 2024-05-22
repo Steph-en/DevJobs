@@ -348,18 +348,6 @@ label {
         cursor: pointer;
     }
 
-    .company {
-        display: none;
-    }
-
-    .location {
-        display: none;
-    }
-
-    .contract {
-        display: none;
-    }
-
     .mobile-filter {
         width: 100%;
         display: flex;
@@ -386,8 +374,20 @@ label {
         background-color: var(--violet);
     }
 
-    .mobile-filter .second{
+    .mobile-filter .second:hover{
         cursor: pointer;
+    }
+
+    .company {
+        display: none;
+    }
+
+    .location {
+        display: none;
+    }
+
+    .contract {
+        display: none;
     }
  
     .job {
