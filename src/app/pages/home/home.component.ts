@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
       } else {
         console.log("No job left");
       }
-      // this.filteredLocationList = jobLocations;
+      this.filteredLocationList = jobLocations;
     });
 
     const input = document.querySelector('.input') as HTMLInputElement | null;

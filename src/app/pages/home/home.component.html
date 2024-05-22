@@ -2,13 +2,13 @@
     <section class="filter">
         <form>
             <label class="mobile-filter">
-                <input type="text" style="background-color: var(--card-bg);" placeholder="Filter by title..." #filter>
+                <input type="text" style="background-color: var(--card-bg);" placeholder="Filter by title..." #filter1>
                 <div class="filter"
                     style="display: flex; align-items: center; justify-content: space-between; width: 25%;">
                     <img src="../../../assets/mobile/icon-filter.svg" alt="filter icon" class="filters"
                         (click)="toggleFields()">
                     <p class="second" type="button"
-                        (click)="filterResults(filter.value || location.value || check.value)">
+                        (click)="filterResults(filter1.value || location1.value || check1.value)">
                         <img src="../../../assets/mobile/icon-search.svg" alt="search icon">
                     </p>
                 </div>
@@ -17,11 +17,11 @@
                         <div class="loc">
                             <img src="../../assets/desktop/icon-location.svg" alt="location icon">
                             <input style="background-color: var(--card-bg);" type="text"
-                                placeholder="Filter by location…" #location />
+                                placeholder="Filter by location…" #location1 />
                         </div>
                         <div class="checkBox">
                             <div style="display: flex; align-items: center; gap: 20px;">
-                                <input type="checkbox" class="checkmark" (click)="toggleCheckmark()" #check />
+                                <input type="checkbox" class="checkmark" (click)="toggleCheckmark()" #check1 />
                                 <p style="font-size: 16px; font-weight: bold; color: var(--font);">Full Time
                                     <span>Only</span>
                                 </p>
