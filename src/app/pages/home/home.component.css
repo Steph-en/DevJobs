@@ -382,11 +382,10 @@ label {
         width: 20px;
         height: 20px;
     }
-
+ 
     .job {
         width: 84%;
         gap: 60px 20px;
-        z-index: -1;
     }
 
     .load-more {

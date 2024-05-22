@@ -22,10 +22,13 @@ export class HomeComponent implements OnInit {
 
   toggleFields() {
     const filters = document.querySelector(".backFilter") as HTMLElement;
-    if (filters) {
+    const index = document.querySelector(".job") as HTMLElement;
+
+    if (filters && index) {
       filters.style.display = filters.style.display === 'block' ? 'none' : 'block';
+      index.style.zIndex =  filters.style.display === 'block'  ? '-1' : '1';
     }
-    console.log("fiskdf");
+    console.log("Toggle execute");
   }
 
   toggleCheckmark() {
@@ -33,7 +36,7 @@ export class HomeComponent implements OnInit {
     if (checkmark) {
       checkmark.classList.toggle('check');
     }
-    console.log("dkjkndfk");
+    console.log("Check active");
   }
 
   displayMoreJob() {
