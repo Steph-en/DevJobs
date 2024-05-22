@@ -28,10 +28,7 @@ export class HomeComponent implements OnInit {
       filters.style.display = filters.style.display === 'block' ? 'none' : 'block';
       index.style.zIndex =  filters.style.display === 'block'  ? '-1' : '1';
     }
-<<<<<<< HEAD
-=======
     console.log("Toggle execute");
->>>>>>> 131132ca5475a9dc369b4d4d4dcdaa4b23c95271
   }
 
   toggleCheckmark() {
