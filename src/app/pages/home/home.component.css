@@ -340,14 +340,6 @@ label {
         background-color: var(--violet);
     }
 
-    .filterFields .primary:hover{
-        cursor: pointer;
-    }
-
-    .filters:hover{
-        cursor: pointer;
-    }
-
     .mobile-filter {
         width: 100%;
         display: flex;
@@ -372,10 +364,6 @@ label {
         align-items: center;
         justify-content: center;
         background-color: var(--violet);
-    }
-
-    .mobile-filter .second:hover{
-        cursor: pointer;
     }
 
     .company {
