@@ -340,6 +340,14 @@ label {
         background-color: var(--violet);
     }
 
+    .filterFields .primary:hover{
+        cursor: pointer;
+    }
+
+    .filters:hover{
+        cursor: pointer;
+    }
+
     .company {
         display: none;
     }
@@ -378,9 +386,8 @@ label {
         background-color: var(--violet);
     }
 
-    .mobile-filter .second img {
-        width: 20px;
-        height: 20px;
+    .mobile-filter .second{
+        cursor: pointer;
     }
  
     .job {
