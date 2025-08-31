@@ -10,7 +10,7 @@ import { RouterLink, RouterOutlet, RouterModule } from '@angular/router';
   imports: [CommonModule, RouterOutlet, RouterLink, RouterModule]
 })
 export class AppComponent implements OnInit{
-  title = 'dev-jobs';
+  // title = 'dev-jobs';
 
   constructor() {}
 

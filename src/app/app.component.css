@@ -46,6 +46,10 @@ header {
   background-image: url("/assets/desktop/bg-pattern-header.svg");
 }
 
+img:hover {
+  cursor: pointer;
+}
+
 .toggle {
   gap: 10px;
   display: flex;

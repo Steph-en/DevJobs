@@ -1,5 +1,5 @@
 # Ignored Files
-#.angular
+.angular
 
 ## General
 node_modules
